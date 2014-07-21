@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.outputController">
+    <children>
+        <TextArea fx:id="outputTextArea" layoutX="26.0" layoutY="78.0" prefHeight="369.0" prefWidth="575.0" promptText="Tool's output is shown here in the text..." wrapText="true" />
+        <Label layoutX="26.0" layoutY="22.0" prefHeight="17.0" prefWidth="70.0" text="Task name" />
+        <Label fx:id="taskNameLabel" layoutX="88.0" layoutY="18.0" prefHeight="25.0" prefWidth="134.0">
+            <textFill>
+                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop color="#206b38" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </textFill></Label>
+        <Label layoutX="26.0" layoutY="55.0" prefHeight="17.0" prefWidth="70.0" text="Output" />
+        <Button fx:id="stopButton" disable="true" layoutX="182.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleStopButton" prefHeight="25.0" prefWidth="62.0" text="Stop" />
+        <Button fx:id="runTaskButton" layoutX="96.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleRunButton" prefHeight="25.0" prefWidth="62.0" text="Run" />
+        <Label layoutX="301.0" layoutY="16.0" prefHeight="17.0" prefWidth="45.0" text="Source:" />
+        <Label layoutX="301.0" layoutY="47.0" prefHeight="17.0" prefWidth="45.0" text="Target:" />
+        <Label fx:id="sourceLabel" layoutX="345.0" layoutY="13.0" prefHeight="25.0" prefWidth="160.0">
+        </Label>
+        <Label fx:id="targetLabel" layoutX="345.0" layoutY="43.0" prefHeight="25.0" prefWidth="160.0">
+        </Label>
+        <Button fx:id="viewLogButton" disable="true" layoutX="269.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleViewLogButtonButton" prefHeight="25.0" prefWidth="90.0" text="View log" />
+        <Button fx:id="viewAcceptedButton" disable="true" layoutX="373.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleAcceptedButton" prefHeight="25.0" prefWidth="121.0" text="Accepted records" />
+    </children>
+</Pane>

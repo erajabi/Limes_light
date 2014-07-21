@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" id="AnchorPane" prefHeight="630.0" prefWidth="782.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.acceptedLinksController">
+    <children>
+
+        <TableView fx:id="table" layoutY="5.0" prefHeight="519.0" prefWidth="742.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="5.0">
+            <columns>
+
+                <TableColumn fx:id="linkIDCol" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" resizable="false" text="ID" />
+                <TableColumn fx:id="sourceCol" minWidth="350.0" prefWidth="350.0" text="Source">
+
+                </TableColumn>
+                <TableColumn fx:id="targetCol" minWidth="350.0" prefWidth="300.0" text="Target" />
+            </columns>
+            <effect>
+                <DropShadow color="GREY" />
+            </effect>
+        </TableView>
+
+              <VBox layoutX="338.0" layoutY="551.0" maxWidth="175.0" minWidth="50.0" prefHeight="37.0" prefWidth="71.0" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="373.0">
+            <padding>
+                <Insets left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </VBox>
+        <StackPane fx:id="pagePanel" layoutX="394.0" layoutY="534.0" prefHeight="65.0" prefWidth="363.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="25.0">
+         <children>
+                <Pagination fx:id="pagination" currentPageIndex="5" pickOnBounds="false" prefHeight="65.0" prefWidth="318.0" styleClass="bullet, grid-pagination">
+                    <effect>
+                        <DropShadow color="#dfdfdf5d" height="16.96825396825397" radius="7.984126984126984" width="16.96825396825397" />
+                    </effect>
+                </Pagination>
+         </children></StackPane>
+        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="134.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="634.0" AnchorPane.topAnchor="0.0" />
+      <Text fx:id="totalLinks" fill="WHITE" fontSmoothingType="LCD" layoutX="137.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="11.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Source to target:" wrappingWidth="126.296875">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="sourceAndTarget" fill="WHITE" fontSmoothingType="LCD" layoutX="142.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="231.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+          <Text fill="WHITE" layoutX="14.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accepted links:">
+              <font>
+                  <Font name="System Bold" size="16.0" />
+              </font>
+          </Text>
+          <TextField alignment="CENTER_LEFT" layoutX="354.0" layoutY="542.0" maxWidth="50.0" minWidth="28.0" onAction="#changeLimit" prefHeight="31.0" prefWidth="43.0" promptText="limit" />
+    </children>
+    <stylesheets>
+        <URL value="@css/ui.css" />
+    </stylesheets>
+</AnchorPane>

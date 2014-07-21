@@ -1,0 +1,1 @@
+[{"reviewedNumber":"25","processedTime":"15.493","acceptedNumber":"122","taskName":"dataCite2OpenUK"}]

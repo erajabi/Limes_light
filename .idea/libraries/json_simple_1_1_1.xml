@@ -1,0 +1,55 @@
+<component name="libraryTable">
+  <library name="json-simple-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/annotations-7.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/arq-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/BorderFlow.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/collections-generic-4.01.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/conja-1.06-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dsutils-1.04-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-collections-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icu4j-3.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/iri-0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/java-getopt-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jena-2.6.2-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jena-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jgap-examples.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jgap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jlibsvm-0.91-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/JSAP-2.0a-ds1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LBJ2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LBJ2Library.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LbjNerTagger.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LIMES.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lucene-core-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ml-0.911-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/runutils-0.91-20111226.060632-23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/simmetrics_jar_v1_6_2_d07_02_07.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-log4j12-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/SSJoinJava.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stats-0.93-20111226.060130-6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stax-api-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/symja-2012-04-08.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/trees-1.023-20111226.060448-9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wstx-asl-3.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xercesImpl-2.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-dialogs-0.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/FXMessageBox.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/java-getopt-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/symja-2012-04-08.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-dialogs-0.0.4.jar!/" />
+    </SOURCES>
+  </library>
+</component>
