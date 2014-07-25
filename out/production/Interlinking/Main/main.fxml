@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<TabPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="595" prefHeight="595.0" prefWidth="693.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller" >
+    <tabs >
+        <Tab text="Tasks" >
+            <content>
+                <fx:include fx:id="taskTab" source="tasksTab.fxml"  />
+            </content>
+        </Tab>
+        <Tab text="Prefix" >
+            <content >
+                <fx:include fx:id="prefixTab" source="prefixes.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Dataset" >
+            <content>
+                <fx:include fx:id="datasetTab" source="datasets.fxml"/>
+            </content>
+        </Tab>
+    </tabs>
+    <contextMenu>
+        <ContextMenu>
+            <items>
+                <MenuItem mnemonicParsing="false" text="1" />
+            </items>
+        </ContextMenu>
+    </contextMenu>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+    <effect>
+        <Blend />
+    </effect>
+</TabPane>

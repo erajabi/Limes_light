@@ -1,0 +1,125 @@
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: DBpedia_Skos_Sample
+Var: ?x
+Prefixes: {dc=http://purl.org/dc/elements/1.1/, rdfs=http://www.w3.org/2000/01/rdf-schema#, lom=http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#, dbpedia=http://dbpedia.org/ontology, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, europeana=http://www.europeana.eu/schemas/edm/, skos=http://www.w3.org/2004/02/skos/core#, vcard=http://www.w3.org/2001/vcard-rdf/3.0#, dcterms=http://purl.org/dc/terms/}
+Endpoint: C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt
+Graph: null
+Restrictions: []
+Properties: [skos:prefLabel]
+Functions: {skos:prefLabel={skos:prefLabel=}}
+Page size: 1000
+Type: n3
+
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: DBpedia_Skos_Sample
+Var: ?y
+Prefixes: {dc=http://purl.org/dc/elements/1.1/, rdfs=http://www.w3.org/2000/01/rdf-schema#, lom=http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#, dbpedia=http://dbpedia.org/ontology, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, europeana=http://www.europeana.eu/schemas/edm/, skos=http://www.w3.org/2004/02/skos/core#, vcard=http://www.w3.org/2001/vcard-rdf/3.0#, dcterms=http://purl.org/dc/terms/}
+Endpoint: C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt
+Graph: null
+Restrictions: []
+Properties: [skos:prefLabel]
+Functions: {skos:prefLabel={skos:prefLabel=}}
+Page size: 1000
+Type: n3
+
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: DBpedia_Skos_Sample
+Var: ?x
+Prefixes: {dc=http://purl.org/dc/elements/1.1/, rdfs=http://www.w3.org/2000/01/rdf-schema#, lom=http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#, dbpedia=http://dbpedia.org/ontology, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, europeana=http://www.europeana.eu/schemas/edm/, skos=http://www.w3.org/2004/02/skos/core#, vcard=http://www.w3.org/2001/vcard-rdf/3.0#, dcterms=http://purl.org/dc/terms/}
+Endpoint: C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt
+Graph: null
+Restrictions: []
+Properties: [skos:prefLabel]
+Functions: {skos:prefLabel={skos:prefLabel=}}
+Page size: 1000
+Type: n3
+
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: DBpedia_Skos_Sample
+Var: ?y
+Prefixes: {dc=http://purl.org/dc/elements/1.1/, rdfs=http://www.w3.org/2000/01/rdf-schema#, lom=http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#, dbpedia=http://dbpedia.org/ontology, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, europeana=http://www.europeana.eu/schemas/edm/, skos=http://www.w3.org/2004/02/skos/core#, vcard=http://www.w3.org/2001/vcard-rdf/3.0#, dcterms=http://purl.org/dc/terms/}
+Endpoint: C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt
+Graph: null
+Restrictions: []
+Properties: [skos:prefLabel]
+Functions: {skos:prefLabel={skos:prefLabel=}}
+Page size: 1000
+Type: n3
+
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for DBpedia_Skos_Sample
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <n3> reader
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.FileQueryModule.<init>(FileQueryModule.java:37): RDF model read from C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt is of size 10000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.ModelRegistry.register(ModelRegistry.java:34): Registry = [C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt]
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:92): Properties are [skos:prefLabel]
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:134): Query issued is 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX lom: <http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#>
+PREFIX dbpedia: <http://dbpedia.org/ontology>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX europeana: <http://www.europeana.eu/schemas/edm/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?x ?v0
+WHERE {
+?x skos:prefLabel ?v0 .
+}
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:136): Querying the endpoint.
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 0 to 1000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 1000 to 2000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 2000 to 3000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 3000 to 4000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 4000 to 5000
+23.06.2014 09:39:49 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 5000 to 6000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 6000 to 7000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 7000 to 8000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 8000 to 9000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 9000 to 10000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 10000 to 11000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:232): Retrieved 10000 triples and 10000 entities.
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:233): Retrieving statements took 0.608 seconds.
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 10000 objects to C:\Enayat\Final_Package20130313\Programming\InterlinkingTool\cache\-294170515.ser
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for DBpedia_Skos_Sample
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <n3> reader
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.FileQueryModule.<init>(FileQueryModule.java:37): RDF model read from C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt is of size 10000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.ModelRegistry.register(ModelRegistry.java:34): Registry = [C:/Enayat/Final_Package20130313/Programming/InterlinkingTool/skos_Dbpedia.nt]
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:92): Properties are [skos:prefLabel]
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:134): Query issued is 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX lom: <http://data.organic-edunet.eu/lom_ontology_organicEdunet.owl#>
+PREFIX dbpedia: <http://dbpedia.org/ontology>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX europeana: <http://www.europeana.eu/schemas/edm/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?y ?v0
+WHERE {
+?y skos:prefLabel ?v0 .
+}
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:136): Querying the endpoint.
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 0 to 1000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 1000 to 2000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 2000 to 3000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 3000 to 4000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 4000 to 5000
+23.06.2014 09:39:50 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 5000 to 6000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 6000 to 7000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 7000 to 8000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 8000 to 9000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 9000 to 10000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:144): Getting statements 10000 to 11000
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:232): Retrieved 10000 triples and 10000 entities.
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:233): Retrieving statements took 0.336 seconds.
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 10000 objects to C:\Enayat\Final_Package20130313\Programming\InterlinkingTool\cache\-294170515.ser
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 385ms.
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name nt
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name nt not found. Using .nt as default format.
+23.06.2014 09:39:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+23.06.2014 09:39:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 10002 links above acceptance threshold.
+23.06.2014 09:39:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 81136 links to review.
+23.06.2014 09:39:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 3.665 seconds
+23.06.2014 09:39:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

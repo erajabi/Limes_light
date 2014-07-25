@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import Main.FormattedTableCellFactory?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="782.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.acceptedLinksController">
+    <children>
+
+        <TableView fx:id="table" prefHeight="400.0" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="37.0">
+            <columns>
+
+                <TableColumn fx:id="linkIDCol" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" resizable="false" text="ID" />
+                <TableColumn fx:id="sourceCol" minWidth="350.0" prefWidth="350.0" text="Source" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sourceCol" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="targetCol" minWidth="350.0" prefWidth="300.0" text="Target" />
+            </columns>
+            <effect>
+                <DropShadow color="GREY" />
+            </effect>
+        </TableView>
+
+        <VBox maxWidth="80.0" minWidth="50.0" prefHeight="65.0" prefWidth="79.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Limit" textFill="#dfdfdf" />
+                <TextField alignment="CENTER_LEFT" maxWidth="50.0" minWidth="28.0" onAction="#changeLimit" prefHeight="25.0" prefWidth="28.0" VBox.vgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </VBox>
+        <StackPane fx:id="pagePanel" prefHeight="65.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="79.0">
+            <children>
+                <Pagination fx:id="pagination" currentPageIndex="5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="633.0" styleClass="bullet, grid-pagination">
+                    <effect>
+                        <DropShadow color="#dfdfdf5d" height="16.96825396825397" radius="7.984126984126984" width="16.96825396825397" />
+                    </effect>
+                </Pagination>
+            </children>
+        </StackPane>
+        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="134.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="634.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Accepted links:">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <Text fx:id="totalLinks" fill="WHITE" layoutX="148.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="105.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="321.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Source to target:">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
+        <Text fx:id="sourceAndTarget" fill="WHITE" layoutX="458.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+    </children>
+    <stylesheets>
+        <URL value="@Main/css/ui.css" />
+    </stylesheets>
+</AnchorPane>

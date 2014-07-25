@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import Main.FormattedTableCellFactory?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.DatasetController">
+    <children>
+        <TextField fx:id="datasetNameText" layoutX="113.0" layoutY="34.0" prefHeight="25.0" prefWidth="133.0" promptText="A unique name" />
+        <ComboBox fx:id="endpointTypeCombo" layoutX="474.0" layoutY="34.0" onAction="#handleSelectAction" prefHeight="25.0" prefWidth="123.0" />
+        <TextField fx:id="endpointAddressText" layoutX="112.0" layoutY="69.0" prefHeight="25.0" prefWidth="235.0" promptText="SPARQL Endpoint or Dump file address" />
+        <ComboBox fx:id="dataDumpFormatCombo" layoutX="474.0" layoutY="69.0" prefHeight="25.0" prefWidth="123.0"/>
+        <Button fx:id="addButton" layoutX="575.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="25.0" prefWidth="76.0" text="Add" />
+        <Button fx:id="updateButton" layoutX="575.0" layoutY="141.0" mnemonicParsing="false" onAction="#handleUpdateAction" prefHeight="25.0" prefWidth="76.0" text="Update" />
+        <Button fx:id="deleteButton" layoutX="575.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="25.0" prefWidth="76.0" text="Delete" />
+        <Button fx:id="clearButton" layoutX="575.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="25.0" prefWidth="76.0" text="Clear" />
+
+        <TableView fx:id="datasetTable" layoutX="20.0" layoutY="108.0" prefHeight="445.0" prefWidth="545.0">
+            <columns>
+                <TableColumn fx:id="datasetNameCol" prefWidth="100" text="Dataset Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="datasetName" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="endpointType" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="endpointAddressCol" prefWidth="290.0" text="Endpoint Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="endpointAddress" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="dataDumpFormatCol" prefWidth="78.0" text="Format">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dataDumpFormat" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+            </columns>
+            <sortOrder>
+                <fx:reference source="datasetNameCol" />
+                <fx:reference source="typeCol" />
+                <fx:reference source="endpointAddressCol" />
+            </sortOrder>
+        </TableView>
+        <Label layoutX="419.0" layoutY="73.0" text="Format" />
+        <Label layoutX="24.0" layoutY="38.0" text="Dataset Name" />
+        <Label fx:id="nameErrorLabel" layoutX="256.0" layoutY="38.0" text="* Enter correct name" textFill="#fc0707" visible="false" />
+        <Button fx:id="browseButton" layoutX="355.0" layoutY="69.0" mnemonicParsing="false" text="Browse" visible="false" />
+        <Label fx:id="endpointErrorLabel" layoutX="358.0" layoutY="74.0" text="*" textFill="#eb0707" visible="false" />
+        <Label fx:id="endpointTypeErrorLabel" layoutX="608.0" layoutY="41.0" text="*" textFill="#eb0707" visible="false" />
+        <Label fx:id="formatErrorLabel" layoutX="605.0" layoutY="73.0" text="*" textFill="#eb0707" visible="false" />
+        <Label layoutX="381.0" layoutY="38.0" text="Endpoint Type" />
+        <Label layoutX="23.0" layoutY="73.0" text="Endpoint URI" />
+
+    </children>
+</Pane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import Main.FormattedTableCellFactory?>
+
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.prefixController">
+    <effect>
+        <InnerShadow />
+    </effect>
+    <children>
+        <Label layoutX="54.0" layoutY="28.0" text="Prefix Name" textFill="#000000bc" />
+        <Label layoutX="54.0" layoutY="63.0" text="Prefix Address" />
+        <TableView layoutX="54.0" layoutY="99.0" prefHeight="420.0" prefWidth="492.0" fx:id="prefixTable" editable="true">
+            <columns>
+                <TableColumn fx:id="prefixNameCol" text="Prefix Name" prefWidth="100" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prefixName" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="prefixAddressCol" text="Prefix Address" prefWidth="390">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prefixAddress" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+            </columns>
+            <sortOrder>
+                <fx:reference source="prefixNameCol"/>
+                <fx:reference source="prefixAddressCol"/>
+            </sortOrder>
+            <editable>true</editable>
+        </TableView>
+        <TextField layoutX="155.0" layoutY="24.0" fx:id="addPrefixName" />
+        <TextField layoutX="155.0" layoutY="59.0" prefHeight="25.0" prefWidth="346.0" fx:id="addPrefixAddress" />
+        <Button layoutX="504.0" layoutY="59.0" mnemonicParsing="false" text="Add" onAction="#handleAddAction"/>
+        <Button layoutX="564.0" layoutY="59.0" mnemonicParsing="false" text="Update" onAction="#handleUpdateAction"/>
+        <Button layoutX="600.0" layoutY="59.0" mnemonicParsing="false" text="Delete" onAction="#handleDeleteAction"/>
+
+    </children></AnchorPane>

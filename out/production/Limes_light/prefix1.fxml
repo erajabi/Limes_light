@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<!--<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import Main.FormattedTableCellFactory?> -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.TasksController">
+    <children>
+        <TextField fx:id="taskNameText" layoutX="98.0" layoutY="16.0" prefHeight="25.0" prefWidth="174.0" promptText="A unique task name" />
+        <Label layoutX="21.0" layoutY="20.0" text="Task Name" />
+        <TitledPane fx:id="targetPane" animated="false" collapsible="false" layoutX="338.0" layoutY="47.0" prefHeight="178.0" prefWidth="253.0" text="Target">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="177.0" prefWidth="255.0">
+                    <children>
+                        <Label layoutX="21.0" layoutY="14.0" text="Dataset" />
+                        <ComboBox fx:id="targetDatasetCombo" layoutX="80.0" layoutY="10.0" prefWidth="150.0" />
+                        <Label layoutX="21.0" layoutY="46.0" text="Prefix" />
+                        <ComboBox fx:id="targetPrefixCombo" layoutX="80.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="21.0" layoutY="80.0" text="Property" />
+                        <TextField fx:id="targetPropertyText" layoutX="80.0" layoutY="76.0" promptText="Source property" />
+                  <Label layoutX="17.0" layoutY="118.0" text="Restriction" />
+                  <TextField fx:id="targetRestrictionText" layoutX="80.0" layoutY="114.0" promptText="Restriction" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" layoutX="20.0" layoutY="47.0" prefHeight="178.0" prefWidth="253.0" text="Source">
+            <content>
+                <AnchorPane fx:id="sourcePane" minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="213.0">
+                    <children>
+                        <Label layoutX="21.0" layoutY="14.0" text="Dataset" />
+                        <ComboBox fx:id="sourceDatasetCombo" layoutX="85.0" layoutY="10.0" prefWidth="150.0" />
+                        <Label layoutX="21.0" layoutY="46.0" text="Prefix" />
+                        <ComboBox fx:id="sourcePrefixCombo" layoutX="85.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="21.0" layoutY="80.0" text="Property" />
+                        <TextField fx:id="sourcePropertyText" layoutX="85.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" promptText="Source property" />
+                  <TextField fx:id="sourceRestrictionText" layoutX="85.0" layoutY="113.0" prefHeight="25.0" prefWidth="149.0" promptText="Restriction" />
+                  <Label layoutX="19.0" layoutY="117.0" text="Restriction" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+        <TableView fx:id="taskTable" layoutX="21.0" layoutY="236.0" prefHeight="297.0" prefWidth="574.0">
+            <columns>
+                <TableColumn fx:id="taskNameCol" prefWidth="102.0" text="Task Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="taskName" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="sourceDatasetCol" prefWidth="110.0" text="Source Dataset">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sourceDataset" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="targetDatasetCol" prefWidth="110.0" text="Target Dataset">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="targetDataset" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="sourcePropertyCol" prefWidth="125.0" text="Source Property">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sourceProperty" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+                <TableColumn fx:id="targetPropertyCol" prefWidth="125.0" text="Target Property">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="targetProperty" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="left">
+                        </FormattedTableCellFactory>
+                    </cellFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="saveButton" layoutX="603.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="25.0" prefWidth="78.0" text="Add task" />
+        <Button fx:id="UpdateButton" layoutX="603.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleUpdateAction" prefHeight="25.0" prefWidth="78.0" text="Update" />
+        <Button fx:id="DeleteButton" layoutX="603.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="25.0" prefWidth="78.0" text="Delete" />
+        <Button fx:id="clearButton" layoutX="603.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleClearAction" prefHeight="25.0" prefWidth="78.0" text="New task" />
+      <ComboBox fx:id="algorithmCombo" layoutX="457.0" layoutY="16.0" prefHeight="25.0" prefWidth="138.0" />
+      <Label layoutX="338.0" layoutY="20.0" text="Matching Algorithm" />
+      <Label fx:id="errorLabel" layoutX="280.0" layoutY="20.0" text="Error!" textFill="#ee0202" />
+      <Label fx:id="errorLabel1" layoutX="282.0" layoutY="128.0" text="Empty!" textFill="#ee0202" />
+      <Label fx:id="errorLabel3" layoutX="600.0" layoutY="128.0" text="Empty!" textFill="#ee0202" />
+      <Label fx:id="errorLabel2" layoutX="602.0" layoutY="20.0" text="Empty!" textFill="#ee0202" />
+      <Button fx:id="runTaskButton" layoutX="603.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleRunAction" prefHeight="25.0" prefWidth="78.0" text="Run task" />
+    </children>
+</Pane>
