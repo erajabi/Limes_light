@@ -1,1 +1,0 @@
-[{"reviewedNumber":null,"processedTime":null,"acceptedNumber":null,"taskName":"dataCite2GlobeTitles"}]
