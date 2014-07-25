@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import Main.FormattedTableCellFactory?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.TasksController">
+   <children>
+      <TextField fx:id="taskNameText" layoutX="119.0" layoutY="36.0" promptText="A unique task name" />
+      <Label layoutX="42.0" layoutY="40.0" text="Task Name" />
+      <TitledPane fx:id="targetPane" animated="false" layoutX="320.0" layoutY="75.0" prefHeight="178.0" prefWidth="253.0" text="Target">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="177.0" prefWidth="255.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="Dataset" />
+                  <ComboBox fx:id="targetDatasetCombo" layoutX="80.0" layoutY="10.0" prefWidth="150.0" />
+                  <Label layoutX="21.0" layoutY="46.0" text="Prefix" />
+                  <ComboBox fx:id="targetPrefixCombo" layoutX="79.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0" />
+                  <Label layoutX="21.0" layoutY="80.0" text="Property" />
+                  <TextField fx:id="targetPropertyText" layoutX="80.0" layoutY="76.0" promptText="Source property" />
+                  <Label layoutX="22.0" layoutY="114.0" text="Page Size" />
+                  <ComboBox fx:id="targetPagesizeCombo" layoutX="80.0" layoutY="110.0" prefHeight="25.0" prefWidth="100.0" promptText="Page Size" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="42.0" layoutY="75.0" prefHeight="178.0" prefWidth="253.0" text="Source">
+         <content>
+            <AnchorPane fx:id="sourcePane" minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="213.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="Dataset" />
+                  <ComboBox fx:id="sourceDatasetCombo" layoutX="84.0" layoutY="10.0" prefWidth="150.0" />
+                  <Label layoutX="21.0" layoutY="46.0" text="Prefix" />
+                  <ComboBox fx:id="sourcePrefixCombo" layoutX="84.0" layoutY="42.0" prefHeight="25.0" prefWidth="80.0" />
+                  <Label layoutX="21.0" layoutY="80.0" text="Property" />
+                  <TextField fx:id="sourcePropertyText" layoutX="84.0" layoutY="76.0" promptText="Source property" />
+                  <Label layoutX="21.0" layoutY="110.0" text="Page Size" />
+                  <ComboBox fx:id="sourcePagesizeCombo" layoutX="84.0" layoutY="106.0" prefHeight="25.0" prefWidth="97.0" promptText="Page Size" visibleRowCount="5" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TableView fx:id="taskTable" layoutX="42.0" layoutY="267.0" prefHeight="265.0" prefWidth="437.0">
+         <columns>
+             <TableColumn fx:id="taskNameCol" text="Task Name" prefWidth="75" >
+                 <cellValueFactory>
+                     <PropertyValueFactory property="taskName" />
+                 </cellValueFactory>
+                 <cellFactory>
+                     <FormattedTableCellFactory alignment="left">
+                     </FormattedTableCellFactory>
+                 </cellFactory>
+             </TableColumn>
+             <TableColumn fx:id="sourcePropertyCol" text="source Property" prefWidth="75" >
+                 <cellValueFactory>
+                     <PropertyValueFactory property="sourceProperty" />
+                 </cellValueFactory>
+                 <cellFactory>
+                     <FormattedTableCellFactory alignment="left">
+                     </FormattedTableCellFactory>
+                 </cellFactory>
+             </TableColumn>
+             <TableColumn fx:id="targetPropertyCol" text="target Property" prefWidth="75" >
+                 <cellValueFactory>
+                     <PropertyValueFactory property="targetProperty" />
+                 </cellValueFactory>
+                 <cellFactory>
+                     <FormattedTableCellFactory alignment="left">
+                     </FormattedTableCellFactory>
+                 </cellFactory>
+             </TableColumn>
+             <TableColumn fx:id="sourceDatasetCol" text="source Dataset" prefWidth="75" >
+                 <cellValueFactory>
+                     <PropertyValueFactory property="sourceDataset" />
+                 </cellValueFactory>
+                 <cellFactory>
+                     <FormattedTableCellFactory alignment="left">
+                     </FormattedTableCellFactory>
+                 </cellFactory>
+             </TableColumn>
+             <TableColumn fx:id="targetDatasetCol" text="target Dataset" prefWidth="75" >
+                 <cellValueFactory>
+                     <PropertyValueFactory property="targetDataset" />
+                 </cellValueFactory>
+                 <cellFactory>
+                     <FormattedTableCellFactory alignment="left">
+                     </FormattedTableCellFactory>
+                 </cellFactory>
+             </TableColumn>
+         </columns>
+      </TableView>
+      <Button fx:id="saveButton" layoutX="497.0" layoutY="267.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Save task" onAction="#handleAddAction"/>
+      <Button fx:id="UpdateButton" layoutX="497.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Updatet ask" onAction="#handleUpdateAction"/>
+      <Button fx:id="DeleteButton" layoutX="497.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Delete task"  onAction="#handleDeleteAction" />
+      <Button fx:id="newButton" layoutX="320.0" layoutY="36.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="New task" />
+   </children>
+</Pane>

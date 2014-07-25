@@ -1,0 +1,208 @@
+package Main;
+
+import Main.Controller;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+
+import java.io.*;
+
+
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+import java.io.*;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: Enayat
+ * Date: 6/2/14
+ * Time: 12:12 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class outputController1 extends Controller implements Runnable{
+    @FXML
+    public TextArea outputTextArea;
+    public Label taskNameLabel;
+    public TextField taskNameTextbox;
+    public Label sourceLabel;
+    public Label targetLabel;
+    public Button viewAcceptedButton;
+    public Button viewLogButton;
+    public Button stopButton;
+    Process process=null;
+    protected String mytask;
+    protected Task currentTask;
+    private String configFileName;
+    //private Task currentTask;
+    private boolean finishFlag=false;
+    private Thread outputThread=null;
+
+    public void initialize() {}
+
+    public void handleRunButton() throws InterruptedException {
+        stopButton.setDisable(false);
+        try{
+            configFileName=currentTask.getTaskName()+".xml";
+            ProcessBuilder pb = new ProcessBuilder("java", "-jar", "LIMES.jar",configFileName);
+            process = pb.start();
+            outputThread= new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        InputStreamReader isr = new InputStreamReader(process.getErrorStream());
+                        BufferedReader bri = new BufferedReader(isr);
+                        String line;
+                        while ((line = bri.readLine()) != null) {
+                            log(line);
+                        }
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                        System.out.println("UnExcepted Error");
+
+
+                    }
+                }
+            });
+            outputThread.start();
+            /*
+            StreamGobbler errorGobbler = new StreamGobbler(process.getErrorStream(), "ERROR",outputTextArea);
+            StreamGobbler outputGobbler = new StreamGobbler(process.getInputStream(), "OUTPUT",outputTextArea);
+            outputGobbler.start();
+            errorGobbler.start();
+            //Wait to get exit value
+            try {
+                int exitValue = process.waitFor();
+                System.out.println("\n\nExit Value is " + exitValue);
+            } catch (InterruptedException ew) {
+                // TODO Auto-generated catch block
+                ew.printStackTrace();
+            }          */
+        }
+        catch (IOException jarFileException){
+            System.out.println(jarFileException.getMessage());
+        }
+        if(process.waitFor()==0){
+            stopButton.setDisable(true);
+            if(new File(currentTask.getTaskName()+"_accepted.nt").exists())
+                viewAcceptedButton.setDisable(false);
+            if(new File(currentTask.getTaskName()+".log").exists())
+                viewLogButton.setDisable(false);
+            finishFlag=true;
+        }
+
+    }
+    private void log(final String st) {
+        // we can access fx objects only from fx thread
+        // so we need to wrap log access into Platform#runLater
+        Platform.runLater(new Runnable() {
+
+            @Override
+            public void run() {
+                outputTextArea.setText(st + "\n" + outputTextArea.getText());
+            }
+        });
+    }
+
+    public void handleViewLogButtonButton(){
+        // File accpetedFile=new File("Accepted.nt");
+        try{
+            ProcessBuilder pb = new ProcessBuilder("Notepad.exe", currentTask.getTaskName()+".log");
+            pb.start();
+        }catch(IOException io){
+            System.out.println(io.getMessage());
+        }
+    }
+
+    public void handleAccpetedButton(){
+        // File accpetedFile=new File("Accepted.nt");
+        try{
+            ProcessBuilder pb = new ProcessBuilder("Notepad.exe", currentTask.getTaskName()+"_accepted.nt");
+            pb.start();
+        }catch(IOException io){
+            System.out.println(io.getMessage());
+        }
+    }
+
+    public void setCurrentTask(Task task){
+        taskNameLabel.setText(task.getTaskName());
+        taskNameLabel.setTextFill(Color.GREEN);
+        sourceLabel.setText(task.getSourceDataset());
+        sourceLabel.setTextFill(Color.GREEN);
+        targetLabel.setText(task.getTargetDataset());
+        targetLabel.setTextFill(Color.GREEN);
+        outputTextArea.setEditable(false);
+        outputTextArea.setStyle("-fx-text-fill: white;" +
+                "-fx-background-color: black;" +
+                "-fx-font-family: Times;" +
+                "-fx-font-size: 12;");
+        currentTask=task;
+    }
+
+    @FXML
+    private void handleStopButton()throws Exception{
+        //super.stop();
+        // this called on fx app close, you may call it in user action handler
+        if (process!=null ) {
+            //process.destroy();
+            System.out.println(outputThread.isAlive());
+            outputThread.stop();
+            process.destroy();
+            finishFlag=true;
+            viewAcceptedButton.setDisable(false);
+            viewLogButton.setDisable(false);
+        }
+    }
+
+    @Override
+    public void run() {
+        //To change body of implemented methods use File | Settings | File Templates.
+        //handleRunButton();
+        outputThread.interrupt();
+    }
+}
+    /*
+class StreamGobbler extends Thread {
+    InputStream is;
+    String type;
+    TextArea textArea;
+
+    public StreamGobbler(InputStream is, String type, TextArea ta) {
+        this.is = is;
+        this.type = type;
+        this.textArea=ta;
+    }
+
+    @Override
+    public void run() {
+        try {
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String line = null;
+            while ((line = br.readLine()) != null){
+                System.out.println(type + "> " + line);
+                textArea.appendText(line+"\n");
+                //outputInterlinking.appendText(line+"\n");
+            }
+        }
+        catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
+}              */
+
+
