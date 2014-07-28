@@ -12,3 +12,6 @@ How to run it?
 After downloading the files, run the file src/Main/Main.java
 
 The library exist in lib folder should be attached to the program.
+
+
+The configuration files of tasks go to "config" folder and the results go to "results" folder
